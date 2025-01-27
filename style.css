@@ -34,7 +34,6 @@
   75% { transform: translateX(-10px) translateY(-10px); }
   100% { transform: translateX(10px) translateY(10px); }
 }
-  
 .text2 {    
 animation: shake 0.5s ease-in-out infinite;
 }
