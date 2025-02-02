@@ -3,6 +3,15 @@ const textSum = document.querySelectorAll('.text2');
 const button1 = document.getElementById('button1');
 const button2 = document.getElementById('button2');
 
+switch1.addEventListener("change", function() {
+  textSum.forEach(el => {
+      if (this.checked) {
+          el.classList.add("text2"); // Enable CSS animation
+      } else {
+          el.classList.remove("text2"); // Disable CSS animation
+      }
+  });
+});
 function randomizeText() {
   textElements.forEach(function(element) {
     element.textContent = Math.floor(Math.random() * 100);
