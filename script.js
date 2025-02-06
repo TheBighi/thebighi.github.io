@@ -1,41 +1,5 @@
-const textElements = document.querySelectorAll('.text1');
-const textSum = document.querySelectorAll('.text2');
-const button1 = document.getElementById('button1');
-const button2 = document.getElementById('button2');
+const cursor = document.querySelector('.cursor-glow');
 
-switch1.addEventListener("change", function() {
-  textSum.forEach(el => {
-      if (this.checked) {
-          el.classList.add("text2"); // Enable CSS animation
-      } else {
-          el.classList.remove("text2"); // Disable CSS animation
-      }
-  });
+document.addEventListener('mousemove', (e) => {
+cursor.style.transform = `translate(${e.clientX - 20}px, ${e.clientY - 10}px)`;
 });
-function randomizeText() {
-  textElements.forEach(function(element) {
-    element.textContent = Math.floor(Math.random() * 100);
-  textSum.forEach(function(element) {
-    element.textContent = "";
-  });
-  });
-}
-function calculateText() {
-  let sum = 0;
-
-  // Sum up the values from textElements
-  textElements.forEach(function(element) {
-    sum += parseInt(element.textContent, 10) || 0;  // Ensure it's a number
-  });
-
-  // Set the sum into each of the textSum elements
-  textSum.forEach(function(element) {
-    element.textContent = sum;
-  });
-}
-  
-// Randomize text instantly when the page loads
-randomizeText();
-
-button1.addEventListener('click', randomizeText);
-button2.addEventListener('click', calculateText);
