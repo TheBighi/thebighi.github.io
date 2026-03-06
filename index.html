@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sakura</title>
+  <link rel="icon" type="image/x-icon" href="./Media/image.ico">
+  <title>Sander</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <section class="hero">
     <div class="center-text">
-        <h1>
+        <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
             Hello, I am 
-            <span class="name-container">
+            <span class="name-container" style="font-family: Arial, Helvetica, sans-serif;">
             Sander
             <p>さんだあ</p>
             </span>
@@ -31,45 +32,24 @@
   <hr style="opacity: 0.2;">
   <section class="content-section">
         <div id="projects">
-    <h1 style="opacity: 0.75; margin-bottom: 15px;">&lt;My Projects/&gt;</h1>
+    <h1 style="
+    display: grid; 
+    grid-template-columns: 1fr auto 1fr; 
+    align-items: center; 
+    opacity: 0.75; 
+    margin-bottom: 15px;
+    width: 100%;
+    ">
+    <span style="opacity: 0.5; text-align: right; padding-right: 10px;">
+        sander@porfolio ~ $
+    </span>
 
-    <div id="cards">
-        <div class="card">
-        <img src="./Media/typingapp.png" alt="Typnig App">
-        <h2><span style="font-size: 150%;">∞</span> Type</h2>
-        <p>Quickly generate tasty recipes based on available ingredients.</p>
-        <div class="card-links">
-            <a href="https://example.com" target="_blank" class="website">Website</a>
-            <a href="https://example.com" target="_blank" class="github">Github</a>
-        </div>
-        </div>
+    <span style="white-space: nowrap;">
+        <span style="opacity: 0.85;">cd</span> My Projects
+    </span>
 
-        <div class="card">
-        <img src="/xx.png" alt="xx">
-        <h2>Bla bla bla</h2>
-        <p>Learn new technologies with weq.</p>
-        <div class="card-links">
-            <a href="https://example.com" target="_blank" class="website">Website</a>
-            <a href="https://example.com" target="_blank" class="github">Github</a>
-        </div>
-        </div>
-
-        <div class="card">
-        <img src="/xx.png" alt="xx">
-        <h2>ZEON</h2>
-        <p>Manage all your IT assets at one place efficiently.</p>
-        <div class="card-links">
-            <a href="https://example.com" target="_blank" class="website">Website</a>
-            <a href="https://example.com" target="_blank" class="github">Github</a>
-        </div>
-        </div>
-    </div>
-
-    <div id="more-projects">
-        <a href="https://example.com" target="_blank" class="view-more">View more projects</a>
-    </div>
-</div>
-  </section>
+    <span></span>
+    </h1>
 
   <script src="script.js"></script>
 </body>
