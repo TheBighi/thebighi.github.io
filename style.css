@@ -1,0 +1,154 @@
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* Update your body */
+    body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background: linear-gradient(160deg, #fff0f3 0%, #ffe4ec 50%, #ffd6e7 100%);
+    font-family: 'inter', sans-serif;
+    /* Removed flex from body so content stacks vertically */
+    }
+
+    /* Create a Hero section that takes up exactly one screen height */
+    .hero {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* So the scroll-container stays relative to this */
+    }
+
+    /* Add a class for your next sections (Projects, etc) */
+    .content-section {
+    min-height: 100vh;
+    padding: 50px;
+    background: white; /* Or keep it transparent to see the gradient */
+    text-align: center;
+    }
+
+    .center-text {
+      text-align: center;
+      color: #000000;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .name-container {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center; /* Centers the Japanese text under 'Sander' */
+    vertical-align: middle;
+    }
+
+    .center-text h1 {
+    font-size: 4rem;
+    letter-spacing: 0.05em;
+    font-weight: 300;
+    opacity: 0.8;
+    display: flex; /* Ensures 'Hello' and the 'Name Container' sit together */
+    justify-content: center;
+    align-items: baseline;
+    gap: 0.3em; /* Adds space between 'am' and 'Sander' */
+    }
+
+    .center-text p {
+    font-size: 1rem;
+    letter-spacing: 0.4em;
+    opacity: 0.35;
+    margin: 0; /* Reset margins to control spacing precisely */
+    line-height: 1;
+    }
+    /* ── Petal ── */
+    .sakura {
+      pointer-events: none;
+      position: fixed;
+      top: 0;
+    }
+
+    /* ── Fall ── */
+    @keyframes fall {
+      0%   { opacity: 0.9; top: -20px; }
+      100% { opacity: 0.2; top: 100vh; }
+    }
+
+    /* ── Blow (horizontal drift) ── */
+    @keyframes blow-soft-left   { 0% { margin-left: 0; } 100% { margin-left: -50vw; } }
+    @keyframes blow-medium-left { 0% { margin-left: 0; } 100% { margin-left: -100vw; } }
+    @keyframes blow-soft-right  { 0% { margin-left: 0; } 100% { margin-left: 50vw; } }
+    @keyframes blow-medium-right{ 0% { margin-left: 0; } 100% { margin-left: 100vw; } }
+
+    /* ── Sway (rotation) ── */
+    @keyframes sway-0 { 0%{transform:rotate(-5deg)}  40%{transform:rotate(28deg)}  100%{transform:rotate(3deg)}  }
+    @keyframes sway-1 { 0%{transform:rotate(10deg)}  40%{transform:rotate(43deg)}  100%{transform:rotate(15deg)} }
+    @keyframes sway-2 { 0%{transform:rotate(15deg)}  40%{transform:rotate(56deg)}  100%{transform:rotate(22deg)} }
+    @keyframes sway-3 { 0%{transform:rotate(25deg)}  40%{transform:rotate(74deg)}  100%{transform:rotate(37deg)} }
+    @keyframes sway-4 { 0%{transform:rotate(40deg)}  40%{transform:rotate(68deg)}  100%{transform:rotate(25deg)} }
+    @keyframes sway-5 { 0%{transform:rotate(50deg)}  40%{transform:rotate(78deg)}  100%{transform:rotate(40deg)} }
+    @keyframes sway-6 { 0%{transform:rotate(65deg)}  40%{transform:rotate(92deg)}  100%{transform:rotate(58deg)} }
+    @keyframes sway-7 { 0%{transform:rotate(72deg)}  40%{transform:rotate(118deg)} 100%{transform:rotate(68deg)} }
+    @keyframes sway-8 { 0%{transform:rotate(94deg)}  40%{transform:rotate(136deg)} 100%{transform:rotate(82deg)} }
+
+
+    /* Container to position it at the bottom */
+    .scroll-container {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    opacity: 0.8;
+    }
+
+    /* Optional helper text */
+    .scroll-text {
+    font-family: 'Inter', sans-serif; /* Or your preferred font */
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #555; /* Matches your dark text */
+    }
+
+    /* The Mouse Body */
+    .mouse {
+    width: 24px;
+    height: 40px;
+    border: 2px solid #555;
+    border-radius: 20px;
+    position: relative;
+    }
+
+    /* The Moving Wheel */
+    .wheel {
+    width: 4px;
+    height: 8px;
+    background-color: #555;
+    border-radius: 2px;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scroll-wheel 1.8s infinite ease-in-out;
+    }
+
+    /* The Animation */
+    @keyframes scroll-wheel {
+    0% {
+        top: 8px;
+        opacity: 1;
+    }
+    50% {
+        top: 18px;
+        opacity: 1;
+    }
+    100% {
+        top: 25px;
+        opacity: 0;
+    }
+    }
